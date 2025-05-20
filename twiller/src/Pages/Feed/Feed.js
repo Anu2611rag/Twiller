@@ -5,16 +5,16 @@ import Tweetbox from "./Tweetbox/Tweetbox";
 const Feed = () => {
   const [post, setpost] = useState([]);
 
- useEffect(() => {
-   fetch("http://localhost:5000/post")
-     .then((res) => res.json())
-    .then((data) => {
-       setpost(data);
-     })
+  useEffect(() => {
+    fetch("http://localhost:5000/post")
+      .then((res) => res.json())
+      .then((data) => {
+        setpost(data);
+      })
       
- },[post]);
-// console.log(post)
-  //  const data = [
+  },[post]);
+  // console.log(post)
+  // const data = [
   //   {
   //     _id: "1",
   //     name: "Jane Doe",
@@ -22,26 +22,25 @@ const Feed = () => {
   //     profilePhoto: "https://example.com/profiles/jane.jpg",
   //     post: "Exploring the new features in JavaScript! 🚀 #coding #JavaScript",
   //     photo: "https://example.com/posts/javascript.png",
-  //    },
-  //    {
-  //      _id: "2",
-  //      name: "John Smith",
+  //   },
+  //   {
+  //     _id: "2",
+  //     name: "John Smith",
   //     username: "johnsmith",
   //     profilePhoto: "https://example.com/profiles/john.jpg",
   //     post: "Just finished a great workout session! 💪 #fitness #health",
   //     photo: "https://example.com/posts/workout.png",
   //   },
-  //    {
-  //      _id: "3",
-  //    name: "Alice Johnson",
-  //    username: "alicejohnson",
-  //    profilePhoto: "https://example.com/profiles/alice.jpg",
-  //    post: "Loving the new features in CSS! #webdevelopment #design",
-  //    photo: "https://example.com/posts/css.png",
-  //  },
-  //  ];
-   //setpost(data);
-   
+  //   {
+  //     _id: "3",
+  //     name: "Alice Johnson",
+  //     username: "alicejohnson",
+  //     profilePhoto: "https://example.com/profiles/alice.jpg",
+  //     post: "Loving the new features in CSS! #webdevelopment #design",
+  //     photo: "https://example.com/posts/css.png",
+  //   },
+  // ];
+  // setpost(data);
   return (
     <div className="feed">
       <div className="feed__header">

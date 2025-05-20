@@ -18,50 +18,51 @@ const style = {
   boxShadow: 24,
   borderRadius: 8,
 };
+
 function Editchild({ dob, setdob }) {
-    const [open, setopen] = useState(false);
-    const handleopen = () => {
-      setopen(true);
-    };
-    const handleclose = () => {
-      setopen(false);
-    };
-    return (
-      <React.Fragment>
-        <div className="birthdate-section" onClick={handleopen}>
-          <text>Edit</text>
-        </div>
-        <Modal
-          hideBackdrop
-          open={open}
-          onClose={handleclose}
-          aria-labelledby="child-modal-title"
-          aria-describedby="child-modal-descriptiom"
-        >
-          <Box sx={{ ...style, width: 300, height: 300 }}>
-            <div className="text">
-              <h2>Edit date of birth</h2>
-              <p>
-                This can only be changed a few times
-                <br />
-                Make sure you enter the age of the <br />
-                person using the account.{" "}
-              </p>
-              <input type="date" onChange={(e) => setdob(e.target.value)} />
-              <button
-                className="e-button"
-                onClick={() => {
-                  setopen(false);
-                }}
-              >
-                Cancel
-              </button>
-            </div>
-          </Box>
-        </Modal>
-      </React.Fragment>
-    );
-  }
+  const [open, setopen] = useState(false);
+  const handleopen = () => {
+    setopen(true);
+  };
+  const handleclose = () => {
+    setopen(false);
+  };
+  return (
+    <React.Fragment>
+      <div className="birthdate-section" onClick={handleopen}>
+        <text>Edit</text>
+      </div>
+      <Modal
+        hideBackdrop
+        open={open}
+        onClose={handleclose}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-descriptiom"
+      >
+        <Box sx={{ ...style, width: 300, height: 300 }}>
+          <div className="text">
+            <h2>Edit date of birth</h2>
+            <p>
+              This can only be changed a few times
+              <br />
+              Make sure you enter the age of the <br />
+              person using the account.{" "}
+            </p>
+            <input type="date" onChange={(e) => setdob(e.target.value)} />
+            <button
+              className="e-button"
+              onClick={() => {
+                setopen(false);
+              }}
+            >
+              Cancel
+            </button>
+          </div>
+        </Box>
+      </Modal>
+    </React.Fragment>
+  );
+}
 
 const Editprofile = ({ user, loggedinuser }) => {
   const [name, setname] = useState("");
@@ -90,8 +91,6 @@ const Editprofile = ({ user, loggedinuser }) => {
         console.log("done", data);
       });
   };
-   
-   
   return (
     <div>
       <button
@@ -113,7 +112,7 @@ const Editprofile = ({ user, loggedinuser }) => {
               <CloseIcon />
             </IconButton>
             <h2 className="header-title">Edit Profile</h2>
-            <button className="save-btn"  onClick={handlesave}>Save</button>
+            <button className="save-btn" onClick={handlesave}>Save</button>
           </div>
           <form className="fill-content">
             <TextField

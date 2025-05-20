@@ -1,20 +1,15 @@
 import React from "react";
-
-
 import "./Posts.css";
 import { Avatar } from "@mui/material";
 import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import RepeatIcon from "@mui/icons-material/Repeat";
-
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PublishIcon from "@mui/icons-material/Publish";
 
-const Posts = ({ p }) => { 
-  const { name, username, photo, post, profilephoto} = p;
- 
-   //from here my code
-  return (         
+const Posts = ({ p }) => {
+  const { name, username, photo, post, profilephoto } = p;
+  return (
     <div className="post">
       <div className="post__avatar">
         <Avatar src={profilephoto} />
@@ -49,4 +44,3 @@ const Posts = ({ p }) => {
 };
 
 export default Posts;
-

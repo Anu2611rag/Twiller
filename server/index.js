@@ -28,7 +28,6 @@ async function run() {
     });
     app.post("/post", async (req, res) => {
       const post = req.body;
-      console.log("Received Post:", post);
       const result = await postcollection.insertOne(post);
       res.send(result);
     });
@@ -61,7 +60,6 @@ async function run() {
   } catch (error) {
     console.log(error);
   }
- 
 }
 run().catch(console.dir);
 
@@ -72,4 +70,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Twiller clone is workingon ${port}`);
 });
-

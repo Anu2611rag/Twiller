@@ -26,7 +26,7 @@ const Tweetbox = () => {
     formData.set("image", image);
     axios
       .post(
-        "https://api.imgbb.com/1/upload?key=e657cbdccd4e1c4a51ecdbfe55bdf568",
+        "https://api.imgbb.com/1/upload?key=b0ea2f6cc0f276633b2a8a86d2c43335",
         formData
       )
       .then((res) => {
@@ -78,7 +78,6 @@ const Tweetbox = () => {
         });
     }
   };
-
   return (
     <div className="tweetBox">
       <form onSubmit={handletweet}>
